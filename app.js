@@ -78,7 +78,7 @@ function time(){
 
 function shuffle(){
     let images = document.querySelectorAll('img')
-    let srcs = ['dog1.jpg','arrow.png','batgirl.png','batman.png','captain.jpg','darkseid.png','doctor.jpg','flash.jpg','riddler.jpg','spiderman.jpg','superman.jpg','thor.jpg','joker.jpg','arrow.png','batgirl.png','batman.png','captain.jpg','darkseid.png','doctor.jpg','flash.jpg','riddler.jpg','spiderman.jpg','superman.jpg','thor.jpg']
+    let srcs = ['assets/dog1.jpg','assets/dog2.jpg','assets/dog3.jpg','assets/dog4.jpg','assets/dog5.png','assets/dog6.png','assets/dog8.png','assets/dog9.png','assets/dog10.png','assets/dog11.png','assets/dog12.png','assets/dog13.jpg','assets/dog5.png','assets/dog6.png']
     
     for(let i=srcs.length-1; i>0; i--){
         let j = Math.floor(Math.random() * i)

@@ -1,17 +1,17 @@
 
 #container{
-  height:550px;
-  margin-left:25px;
+  height:70%;
+  margin-left:0px;
 }
 
 .card_outer{
-  height:160px; 
-  width:120px;
+  height:300px; 
+  width:200px;
   background:transparent; 
   perspective:1200px; 
   float:left; 
-  margin-left:40px;
-  margin-top:20px;
+  margin-left:100px;
+  margin-top:10px;
 }
 
 .card_inner{
@@ -26,7 +26,7 @@
   position:absolute; 
   height:100%; 
   width:100%; 
-  background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(40,40,121,1) 35%, rgba(0,212,255,1) 100%);
+  background: url("assets/background6.jpg");
   backface-visibility:hidden; 
   border-radius:10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
