@@ -1,4 +1,4 @@
-let cards = document.querySelectorAll('.card_inner')
+let cards = document.querySelectorAll('.cardinside')
 let firstClick = false
 let cardPair = []
 
@@ -74,11 +74,12 @@ function time(){
         
         document.querySelector('#time').innerHTML = `${MM}:${SS}`
     }, 1000)
+
 }
 
 function shuffle(){
     let images = document.querySelectorAll('img')
-    let srcs = ['assets/dog1.jpg','assets/dog2.jpg','assets/dog3.jpg','assets/dog4.jpg','assets/dog5.png','assets/dog6.png','assets/dog8.png','assets/dog9.png','assets/dog10.png','assets/dog11.png','assets/dog12.png','assets/dog13.jpg','assets/dog5.png','assets/dog6.png']
+    let srcs = ['assets/dog1.jpg','assets/dog2.jpg','assets/dog3.jpg','assets/dog4.jpg','assets/dog5.png','assets/dog6.png','assets/dog1.jpg','assets/dog2.jpg','assets/dog3.jpg','assets/dog4.jpg','assets/dog5.png','assets/dog6.png']
     
     for(let i=srcs.length-1; i>0; i--){
         let j = Math.floor(Math.random() * i)
@@ -91,3 +92,4 @@ function shuffle(){
           images[i].src = srcs[i]
       }
 }
+
