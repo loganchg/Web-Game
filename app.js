@@ -1,12 +1,12 @@
 let cards = document.querySelectorAll('.cardinside')
 let firstClick = false
-let cardPair = []
+let PairsofCard = []
 
 cards.forEach((card)=>{
     card.state = 'unclicked'
 })
 
-shuffle()
+RandomDraw()
 
 for(let i=0; i<cards.length; i++){
     cards[i].addEventListener('click',()=>{
@@ -16,33 +16,33 @@ for(let i=0; i<cards.length; i++){
         if(cards[i].state == 'unclicked'){
             cards[i].style.transform = 'rotateY(180deg)'
             cards[i].state = 'clicked'
-            cardPair.push(cards[i])
-            check()
+            PairsofCard.push(cards[i])
+            CheckPaired()
         }
 
         else if(cards[i].state == 'clicked'){
             cards[i].style.transform = 'rotateY(0deg)'
             cards[i].state = 'unclicked'
-            cardPair = []
+            PairsofCard = []
         }
     })
 }
 
-function check(){
-    if(cardPair.length==2){
-        if(cardPair[0].querySelector('img').src==cardPair[1].querySelector('img').src){
+function CheckPaired(){
+    if(PairsofCard.length==2){
+        if(PairsofCard[0].querySelector('img').src==PairsofCard[1].querySelector('img').src){
             matched()
         }
         else{
-            unmatched(cardPair[0],cardPair[1])
+            unmatched(PairsofCard[0],PairsofCard[1])
         }
     }  
 }
 
 function matched(){
-    cardPair[0].state='blocked'
-    cardPair[1].state='blocked'
-    cardPair = []
+    PairsofCard[0].state='blocked'
+    PairsofCard[1].state='blocked'
+    PairsofCard = []
     let score = document.querySelector('#score').innerHTML
     score++
     document.querySelector('#score').innerHTML = score
@@ -55,9 +55,9 @@ function unmatched(x,y){
         x.style.transform = "rotateY(0deg)"
         y.style.transform = "rotateY(0deg)"
     },750)
-    cardPair[0].state = 'blocked'
-    cardPair[1].state = 'blocked'
-    cardPair = []
+    PairsofCard[0].state = 'blocked'
+    PairsofCard[1].state = 'blocked'
+    PairsofCard = []
 }
 
 function time(){
@@ -77,15 +77,15 @@ function time(){
 
 }
 
-function shuffle(){
+function RandomDraw(){
     let images = document.querySelectorAll('img')
-    let srcs = ['assets/dog1.jpg','assets/dog2.jpg','assets/dog3.jpg','assets/dog4.jpg','assets/dog5.png','assets/dog6.png','assets/dog1.jpg','assets/dog2.jpg','assets/dog3.jpg','assets/dog4.jpg','assets/dog5.png','assets/dog6.png']
+    let srcs = ['assets/dog1.RDpg','assets/dog2.RDpg','assets/dog3.RDpg','assets/dog4.RDpg','assets/dog5.png','assets/dog6.png','assets/dog1.RDpg','assets/dog2.RDpg','assets/dog3.RDpg','assets/dog4.RDpg','assets/dog5.png','assets/dog6.png']
     
     for(let i=srcs.length-1; i>0; i--){
-        let j = Math.floor(Math.random() * i)
-        let temp = srcs[i]
-        srcs[i] = srcs[j]
-        srcs[j] = temp
+        let RD = Math.floor(Math.random() * i)
+        let store = srcs[i]
+        srcs[i] = srcs[RD]
+        srcs[RD] = store
       }
       
       for(let i=0; i<images.length; i++){
