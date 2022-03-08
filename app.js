@@ -79,7 +79,7 @@ function time(){
 
 function RandomDraw(){
     let images = document.querySelectorAll('img')
-    let srcs = ['assets/dog1.RDpg','assets/dog2.RDpg','assets/dog3.RDpg','assets/dog4.RDpg','assets/dog5.png','assets/dog6.png','assets/dog1.RDpg','assets/dog2.RDpg','assets/dog3.RDpg','assets/dog4.RDpg','assets/dog5.png','assets/dog6.png']
+    let srcs = ['assets/dog1.jpg','assets/dog2.jpg','assets/dog3.jpg','assets/dog4.jpg','assets/dog5.png','assets/dog6.png','assets/dog1.jpg','assets/dog2.jpg','assets/dog3.jpg','assets/dog4.jpg','assets/dog5.png','assets/dog6.png']
     
     for(let i=srcs.length-1; i>0; i--){
         let RD = Math.floor(Math.random() * i)
